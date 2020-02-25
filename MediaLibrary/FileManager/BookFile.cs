@@ -1,10 +1,10 @@
-﻿using NLog;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using MediaLibrary.Model;
 
-namespace MediaLibrary
+namespace MediaLibrary.FileManager
 {
     public class BookFile
     {

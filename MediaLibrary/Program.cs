@@ -1,4 +1,6 @@
 ﻿using System;
+using MediaLibrary.FileManager;
+using MediaLibrary.Model;
 using NLog;
 
 namespace MediaLibrary
@@ -10,11 +12,14 @@ namespace MediaLibrary
 
         public static void Main(string[] args)
         {
+
+
+
             logger.Info("Program started");
 
-            string scrubbedFile = FileScrubber.ScrubMovies("../../movies.csv");
-            string albumFileName = "../../albums.csv";
-            string bookFileName = "../../books.csv";
+            string scrubbedFile = FileScrubber.ScrubMovies("../../Files/movies.csv");
+            string albumFileName = "../../Files/albums.csv";
+            string bookFileName = "../../Files/books.csv";
             MovieFile movieFile = new MovieFile(scrubbedFile);
             AlbumFile albumFile = new AlbumFile(albumFileName);
             BookFile bookFile = new BookFile(bookFileName);
